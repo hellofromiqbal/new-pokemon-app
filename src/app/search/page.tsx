@@ -53,9 +53,9 @@ const SearchPage = () => {
           <PokemonListTable data={filteredPokemon}/>
         ) : (
           searchInput !== ""? (
-            searchInput && <Typography sx={{ textAlign: 'center', mt: 10 }}>No Pokemon found...</Typography>
+            searchInput && <Typography variant='h6' sx={{ textAlign: 'center', mt: 10 }}>No Pokemon found...</Typography>
           ) : (
-            <Typography variant='h5' sx={{ textAlign: 'center', mt: 10 }}>Let's catch'em all!</Typography>
+            <Typography variant='h6' sx={{ textAlign: 'center', mt: 10 }}>Let's catch'em all!</Typography>
           )
         )}
       </Box>
