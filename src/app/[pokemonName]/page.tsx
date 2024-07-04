@@ -11,7 +11,8 @@ import BackButton from '@/components/Buttons/BackButton';
 import useMyPokemon from '@/utils/hooks/useMyPokemon';
 
 const PokemonDetails = () => {
-  const { pokemonName } = useParams();
+  const { pokemonName } = useParams<{ pokemonName: string }>();
+  
   const [isCaught, setIsCaught] = useState(false);
 
   const { savePokemonToLocalStorage, removePokemonFromLocalStorage, isPokemonCaught } = useMyPokemon();
