@@ -6,6 +6,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from "@/utils/mui/theme";
 import TanstackProvider from "@/components/TanstackProvider/TanstackProvider";
 import { CssBaseline } from "@mui/material";
+import Navbar from "@/components/Navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +27,13 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <TanstackProvider>
+              <Navbar/>
               {children}
               <CssBaseline/>
             </TanstackProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
+        <Toaster/>
       </body>
     </html>
   );
