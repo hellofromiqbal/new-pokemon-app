@@ -9,7 +9,7 @@ import PokemonListTable from "@/components/Tables/PokemonListTable";
 import PaginationButton from "@/components/Buttons/PaginationButton";
 
 const Home = () => {
-  const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon');
+  const [url, setUrl] = useState<string>('https://pokeapi.co/api/v2/pokemon');
 
   const { data, isError, isFetching, refetch } = useFetchData('pokemon-data', url);
 
@@ -27,13 +27,13 @@ const Home = () => {
       <Box display={'flex'} justifyContent={'space-between'} gap={4}>
         <PaginationButton
           url={data.previous}
-          setUrl={setUrl}
+          setUrl={(url: string | null) => setUrl(url ?? '')}
           label="Prev"
           disabled={data?.previous === null}
         />
         <PaginationButton
           url={data.next}
-          setUrl={setUrl}
+          setUrl={(url: string | null) => setUrl(url ?? '')}
           label="Next"
           disabled={data?.next === null}
         />

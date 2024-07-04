@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Link from 'next/link';
 import { Typography } from '@mui/material';
-import { TableProps, pokemonData } from '@/utils/typescript/types';
+import { pokemonData, TableProps } from '@/utils/typescript/types';
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
